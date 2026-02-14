@@ -1,0 +1,76 @@
+:root {
+    --valentine-red: #dc143c;
+    --soft-pink: #ffb7c5;
+    --hot-pink: #ff69b4;
+    --bg-pink: #fce4ec;
+}
+
+body {
+    background: linear-gradient(135deg, var(--bg-pink) 0%, #fff0f3 100%);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+}
+
+.hidden { display: none !important; }
+
+/* Envelope Styling */
+.envelope-wrapper { position: relative; width: 320px; height: 220px; margin-bottom: 20px; }
+.envelope { position: relative; width: 100%; height: 100%; background: var(--valentine-red); border-radius: 0 0 10px 10px; }
+.top-flap { position: absolute; top: 0; width: 0; height: 0; border-left: 160px solid transparent; border-right: 160px solid transparent; border-top: 110px solid #b01030; z-index: 5; transform-origin: top; transition: 0.6s; }
+.top-flap.open { transform: rotateX(180deg); z-index: 1; }
+.left-flap, .right-flap { position: absolute; border-top: 110px solid transparent; border-bottom: 110px solid transparent; z-index: 4; }
+.left-flap { border-left: 160px solid #e35d6a; }
+.right-flap { right: 0; border-right: 160px solid #e35d6a; }
+.bottom-flap { position: absolute; bottom: 0; border-left: 160px solid transparent; border-right: 160px solid transparent; border-bottom: 110px solid var(--valentine-red); z-index: 4; }
+.heart-seal { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 50px; z-index: 6; text-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+
+.white-paper { position: absolute; width: 90%; height: 180px; background: white; left: 5%; top: 20px; z-index: 2; padding: 20px; box-sizing: border-box; transition: 0.8s; }
+.white-paper.half-out { transform: translateY(-140px); }
+
+/* ROMANTIC CARD (Dashed Border Style) */
+.message-card {
+    background: white;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(220, 20, 60, 0.1);
+    max-width: 400px;
+    width: 90%;
+}
+.card-border {
+    border: 2px dashed var(--soft-pink);
+    border-radius: 20px;
+    padding: 40px 20px;
+    position: relative;
+    text-align: center;
+}
+.card-title { font-family: 'Great Vibes', cursive; color: var(--valentine-red); font-size: 3rem; margin: 0; }
+.card-divider { height: 1px; background: #eee; width: 60%; margin: 15px auto; }
+.card-msg { color: #555; line-height: 1.6; font-size: 1.1rem; }
+.card-signature { font-family: 'Great Vibes', cursive; color: var(--hot-pink); font-size: 2.2rem; margin-top: 20px; }
+
+.corner-heart { position: absolute; color: var(--soft-pink); font-size: 1.2rem; opacity: 0.7; }
+.top-left { top: 10px; left: 10px; } .top-right { top: 10px; right: 10px; }
+.bottom-left { bottom: 10px; left: 10px; } .bottom-right { bottom: 10px; right: 10px; }
+
+/* GIF GARDEN */
+.garden-container { text-align: center; }
+.garden-title { font-family: 'Great Vibes', cursive; font-size: 3.5rem; color: var(--valentine-red); margin-bottom: 10px; }
+.gif-frame { margin-bottom: 20px; }
+.flower-gif { width: 220px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.emoji-row { font-size: 3rem; margin: 15px 0; }
+.garden-footer { color: var(--hot-pink); font-weight: bold; font-size: 1.5rem; }
+
+/* BUTTONS */
+.btn { padding: 10px 30px; border-radius: 50px; cursor: pointer; border: 2px solid var(--valentine-red); font-weight: bold; transition: 0.3s; }
+.btn-open { background: var(--valentine-red); color: white; }
+.btn-nav { background: white; color: var(--valentine-red); font-size: 0.8rem; margin: 10px 5px 0; }
+.btn-nav:hover { background: var(--bg-pink); }
+
+/* Background Hearts */
+.floating-heart { position: absolute; color: var(--soft-pink); opacity: 0.5; pointer-events: none; animation: floatUp 5s linear infinite; }
+@keyframes floatUp { from { transform: translateY(100vh); opacity: 1; } to { transform: translateY(-10vh); opacity: 0; } }

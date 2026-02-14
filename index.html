@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Valentine's Surprise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="heart-container"></div>
+
+    <div class="main-wrapper">
+        <div id="page1" class="page-container">
+            <div class="envelope-wrapper">
+                <div class="envelope">
+                    <div class="top-flap" id="topFlap"></div>
+                    <div class="left-flap"></div>
+                    <div class="right-flap"></div>
+                    <div class="bottom-flap"></div>
+                    <div class="heart-seal" id="heartSeal">❤</div>
+                    
+                    <div class="white-paper" id="paper">
+                        <div class="paper-content">
+                            <div class="to-tag">To: Friends</div>
+                            <p class="script-text">Dear fiends, you are so beautiful</p>
+                            <p class="script-text">That everything in my world...</p>
+                            <div class="paper-hearts">❤ ❤ ❤</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-group">
+                <button class="btn btn-open" id="mainBtn" onclick="handleStep()">OPEN</button>
+            </div>
+        </div>
+
+        <div id="page2" class="page-container hidden">
+            <div class="message-card">
+                <div class="card-border">
+                    <div class="corner-heart top-left">❤</div>
+                    <div class="corner-heart top-right">❤</div>
+                    <div class="corner-heart bottom-left">❤</div>
+                    <div class="corner-heart bottom-right">❤</div>
+
+                    <h1 class="card-title">Happy Valentine's Day!</h1>
+                    <div class="card-divider"></div>
+                    <p class="card-msg">I wanted to tell you that you're absolutely amazing. You make every day brighter just by being in it. Thank you for being there when we need each other.<br>>< Love y'all!</p>
+                    <p class="card-signature">Forever Friends</p>
+                </div>
+                <div class="nav-group">
+                    <button class="btn btn-nav" onclick="goBack(1)">BACK</button>
+                    <button class="btn btn-nav" onclick="goNext(3)">NEXT</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="page3" class="page-container hidden">
+            <div class="garden-container">
+                <h2 class="garden-title">A Flower for You</h2>
+                
+                <div class="gif-frame">
+                    <img src="05ec496d5faa05d450d280a6d1e9eca1.gif" alt="Flower Bouquet" class="flower-gif">
+                </div>
+
+                <p class="garden-footer">I love you!</p>
+                
+                <button class="btn btn-nav" onclick="goBack(2)">BACK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
